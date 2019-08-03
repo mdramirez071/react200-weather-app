@@ -59,6 +59,9 @@ function mapStoreToProps(store) {
     //the weatherData for the current city being selected
     //the searchValue which is a city inputted by the user
     //the search History of a city
+    searchValue: store.search.searchValue,
+    weatherData: store.search.weatherData,
+    searchHistory: store.history.searchHistory
   };
 }
 //Using the connect method we can wrap our App container component to mapStoretoProps function

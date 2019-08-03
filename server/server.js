@@ -8,12 +8,12 @@ app.use(morgan('dev'));
 app.use(express.static('dist'));
 app.use(express.static('public'));
 
-const existingIds = {
-    sandiego: '', //need to retrieve ids for each cities from JSON object
-    newyork: '',
-    washingtondc: '',
-    london: '',
-    tokyo: ''
+const cityIds = {
+    sandiego: 4726311, //need to retrieve ids for each cities from JSON object
+    newyork: 5128638,
+    washingtondc: 4140963,
+    london: 2643743,
+    tokyo: 1850147
   };
 
   app.get('/weather', (req, res, next) => {
