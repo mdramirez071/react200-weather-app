@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getWeather, updateSearchInput } from './searchActions';
+import { getWeather, updateSearchInput } from './searchActions.js';
 
 export default class SearchBar extends Component {
   constructor(props) {
