@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBar from './components/Search';
+import SearchBar from './components/SearchBar';
 import CityInfo from './components/cityInfo';
 import SearchHistory from './components/searchHistory';
 
