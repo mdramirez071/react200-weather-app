@@ -1,7 +1,7 @@
 {
-  "name": "react200-weather-app",
+  "name": "origin-react-starter",
   "version": "0.1.0",
-  "description": "Weather App built from origin-react-starter base application setup for creating a new react project.",
+  "description": "Base application setup for creating a new react project.",
   "main": "server/index.js",
   "scripts": {
     "build": "npm run less && webpack --mode development",
@@ -20,11 +20,8 @@
     "babel-register": "^6.4.3",
     "bluebird": "^3.5.0",
     "chai": "^3.5.0",
-    "dotenv": "^8.0.0",
     "express": "^4.15.3",
     "json-loader": "^0.5.4",
-    "less": "^3.8.1",
-    "less-plugin-autoprefix": "^1.5.1",
     "lodash": "^4.15.0",
     "lodash-webpack-plugin": "^0.10.2",
     "morgan": "^1.8.1",
