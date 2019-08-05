@@ -11,6 +11,6 @@ Code is now ready to be tested.
 Running the tests
 You'll need two terminal windows.
 
-In the first window, type npm start to run your server. In the second window, type npm run test to run the tests and check if passing.
+In the first window, type npm start to run your server. In the second window, type npm test to verify that the tests pass.
 
 To open the Weather App, head to http://localhost:3000 in a browser window.
