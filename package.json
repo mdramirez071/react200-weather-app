@@ -63,5 +63,8 @@
     "type": "git",
     "url": "git://"
   },
+  "engines": {
+    "node": "10.16.0"
+  },
   "license": "MIT"
 }
