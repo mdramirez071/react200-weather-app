@@ -30,8 +30,8 @@ export default class CityInformation extends Component {
             <div className='col-md-4'>
               <div className='card border-light'>
                 <div className='card-body'>
-                  <h5 className='card-title text-center font-weight-bold'>Temperature</h5>
-                  <p className='card-text text-center'>{ temp }°F</p>
+                  <h5 className='card-title text-center font-weight-bold'>Temperature (°F)</h5>
+                  <p className='card-text text-success text-center'>{ temp }°F</p>
                 </div>
               </div>
             </div>
@@ -41,7 +41,7 @@ export default class CityInformation extends Component {
               <div className='card border-light'>
                 <div className='card-body'>
                   <h5 className='card-title text-center font-weight-bold'>Pressure</h5>
-                  <p className='card-text text-center'>{ pressure }</p>
+                  <p className='card-text text-success text-center'>{ pressure }</p>
                 </div>
               </div>
             </div>
@@ -51,7 +51,7 @@ export default class CityInformation extends Component {
               <div className='card border-light'>
                 <div className='card-body'>
                   <h5 className='card-title text-center font-weight-bold'>Humidity</h5>
-                  <p className='card-text text-center'>{ humidity }%</p>
+                  <p className='card-text text-success text-center'>{ humidity }%</p>
                 </div>
               </div>
             </div>
@@ -62,8 +62,8 @@ export default class CityInformation extends Component {
             <div className='col-md-4'>
               <div className='card border-light'>
                 <div className='card-body'>
-                  <h5 className='card-title text-center font-weight-bold'>Lowest Temp</h5>
-                  <p className='card-text text-center'>{ temp_min }°F</p>
+                  <h5 className='card-title text-center font-weight-bold'>Lowest Temp (°F)</h5>
+                  <p className='card-text text-success text-center'>{ temp_min }°F</p>
                 </div>
               </div>
             </div>
@@ -72,8 +72,8 @@ export default class CityInformation extends Component {
             <div className='col-md-4'>
               <div className='card border-light'>
                 <div className='card-body'>
-                  <h5 className='card-title text-center font-weight-bold'>Highest Temp</h5>
-                  <p className='card-text text-center'>{ temp_max }°F</p>
+                  <h5 className='card-title text-center font-weight-bold'>Highest Temp (°F)</h5>
+                  <p className='card-text text-success text-center'>{ temp_max }°F</p>
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@ export default class CityInformation extends Component {
               <div className='card border-light'>
                 <div className='card-body'>
                   <h5 className='card-title text-center font-weight-bold'>Wind Speed</h5>
-                  <p className='card-text text-center'>{ windSpeed }mph</p>
+                  <p className='card-text text-success text-center'>{ windSpeed }mph</p>
                 </div>
               </div>
             </div>

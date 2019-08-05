@@ -9,8 +9,8 @@ export default class App extends React.Component {
       <div className='content'>
         <div className='container'>
           <div className='jumbotron bg-info text-white text-center'>
-            <h1 className='display-2 text-center font-weight-bold'>Thee Weather App</h1>
-            <h4 className='text-center font-weight-bold'>Check Out The Weather Today Dude!</h4>
+            <h1 className='display-2 text-center font-weight-bold'>SDCS Weather App</h1>
+            <h4 className='text-center font-weight-bold'>Check out the weather to see if you'll need an umbrella!</h4>
           </div>
           <SearchBar />
 
