@@ -1,100 +1,94 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-// We'll need to import all those action creators.
-// import {
-//                     //examples of actions
-//                     //   updateExpenseDescription,
-//                     //   updateExpenseAmount,
-//                     //   addExpense
-// } from './actions';
-
-export default class cityInfo extends React.Component {
+export default class CityInformation extends Component {
   constructor(props) {
     super(props);
-
-    // Here we're binding these methods to the context
-    // of the components. This only has to be done,
-    // because these methods are called back by
-    // event emitters (which lose context).
-    this.handleDescriptionInput = this.handleDescriptionInput.bind(this);
-    this.handleAmountInput = this.handleAmountInput.bind(this);
-    this.handleAddExpense = this.handleAddExpense.bind(this);
   }
 
-//   handleDescriptionInput(event) {
-//     // dispatch was provided by connect()
-//     const { dispatch } = this.props;
-//     const { value } = event.target;
-//     dispatch(updateExpenseDescription(value));
-//   }
-
-//   handleAmountInput(event) {
-//     const { dispatch } = this.props;
-//     const { value } = event.target;
-//     dispatch(updateExpenseAmount(value));
-//   }
-
-//   handleAddExpense() {
-//     const { description, amount, dispatch } = this.props;
-//     dispatch(addExpense(description, amount));
-//   }
-
   render() {
-    // These values were provided by connect()
-    const { description, amount, lineItems } = this.props;
+    const { 
+      cityName,
+      lon,
+      lat,
+      temp,
+      pressure,
+      humidity,
+      temp_min,
+      temp_max,
+      windSpeed
+    } = this.props;
+
     return (
-      <div className='card border-danger mb-3'>
-        <div className='card-header text-white bg-danger'>Expense Entries</div>
+      <div className='card border-0'>
+        <div className='card-header text-white bg-info'>City Information</div>
         <div className='card-body'>
-          <form>
-            <div className='form-group'>
-              <label htmlFor='expense-description'>Description</label>
-              <input
-                type='text'
-                className='form-control'
-                id='expense-description'
-                value={ description }
-                onChange={ this.handleDescriptionInput }
-              />
-            </div>
-            <div className='form-group'>
-              <label htmlFor='expense-amount'>Amount</label>
-              <div className='input-group'>
-                <span className='input-group-addon'>$</span>
-                <input
-                  type='text'
-                  className='form-control'
-                  id='expense-amount'
-                  value={ amount }
-                  onChange={ this.handleAmountInput }
-                />
+          <h1 className='card-title text-center'>{ cityName }</h1>
+          <p className='card-text text-center' style={{ fontSize: '14px' }}>Lat/Long: { lat }, { lon }</p>
+          <hr/>
+          <div className='row'>
+            {/* TEMPERATURE */}
+            <div className='col-md-4'>
+              <div className='card border-light'>
+                <div className='card-body'>
+                  <h5 className='card-title text-center font-weight-bold'>Temperature</h5>
+                  <p className='card-text text-center'>{ temp }°F</p>
+                </div>
               </div>
             </div>
-            <button
-              type='button'
-              className='btn btn-danger col-12 mb-5'
-              onClick={ this.handleAddExpense }
-            >+ Add Expense
-            </button>
-            <table className='table table-sm table-hover'>
-              <thead>
-                <tr>
-                  <th>Description</th>
-                  <th style={ { width: 120 } } >Amount</th>
-                </tr>
-              </thead>
-              <tbody>
-                {
-                  lineItems.map(lineItem => (
-                    <tr>
-                      <td>{ lineItem.description }</td>
-                      <td>${ lineItem.amount.toFixed(2) }</td>
-                    </tr>
-                  ))
-                }
-              </tbody>
-            </table>
-          </form>
+
+            {/* PRESSURE */}
+            <div className='col-md-4'>
+              <div className='card border-light'>
+                <div className='card-body'>
+                  <h5 className='card-title text-center font-weight-bold'>Pressure</h5>
+                  <p className='card-text text-center'>{ pressure }</p>
+                </div>
+              </div>
+            </div>
+
+            {/* HUMIDITY */}
+            <div className='col-md-4'>
+              <div className='card border-light'>
+                <div className='card-body'>
+                  <h5 className='card-title text-center font-weight-bold'>Humidity</h5>
+                  <p className='card-text text-center'>{ humidity }%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className='row'>
+            {/* LOWEST TEMP */}
+            <div className='col-md-4'>
+              <div className='card border-light'>
+                <div className='card-body'>
+                  <h5 className='card-title text-center font-weight-bold'>Lowest Temp</h5>
+                  <p className='card-text text-center'>{ temp_min }°F</p>
+                </div>
+              </div>
+            </div>
+
+            {/* HIGHEST TEMP */}
+            <div className='col-md-4'>
+              <div className='card border-light'>
+                <div className='card-body'>
+                  <h5 className='card-title text-center font-weight-bold'>Highest Temp</h5>
+                  <p className='card-text text-center'>{ temp_max }°F</p>
+                </div>
+              </div>
+            </div>
+
+            {/* WIND SPEED */}
+            <div className='col-md-4'>
+              <div className='card border-light'>
+                <div className='card-body'>
+                  <h5 className='card-title text-center font-weight-bold'>Wind Speed</h5>
+                  <p className='card-text text-center'>{ windSpeed }mph</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     );
