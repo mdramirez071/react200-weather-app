@@ -1,15 +1,9 @@
 Redux Weather App
-Creates a Weather App using React and Redux that allows users to click on city tabs or input their own city. The app will return varying weather information for the requested city.
+Creates a Weather App using React and Redux that allows users to click on a few major cities or the user can choose to type in a city of their choice in order to receive the Weather statistics for the day.
 
-Getting Started
-In order to run/test this project, clone this repository and locate the project directory in a terminal window.
+To try out this Weather App, clone the repository to your computer then navigate to the directory where the project has been downloaded using Terminal and type in "code ." to open up the project in Visual Studio Code.
 
-Run npm install to install necessary dependencies. Then type npm run build to compile the project.
-
-Code is now ready to be tested.
-
-Running the tests
-You'll need two terminal windows.
+Run npm install to install necessary dependencies. Then type 'npm run build' to compile the project. The code is now ready to be tested. Now open up another Terminal window, and type in 'npm test' in order to verify that all tests pass successfully.
 
 In the first window, type npm start to run your server. In the second window, type npm test to verify that the tests pass.
 
