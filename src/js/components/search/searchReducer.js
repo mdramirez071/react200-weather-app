@@ -11,7 +11,7 @@ const defaultState = {
   history: []
 };
 
-export default function searchbarReducer(state = defaultState, action) {
+export default function searchReducer(state = defaultState, action) {
   const { type, payload } = action;
   
   switch (type) {

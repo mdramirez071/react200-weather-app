@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import cityInfo from './CityInfo';
+import CityInfo from './cityInfo';
 
 function mapStoreToProps(store) {
     return {
@@ -15,4 +15,4 @@ function mapStoreToProps(store) {
     };
 }
 
-export default connect(mapStoreToProps)(cityInfo);
+export default connect(mapStoreToProps)(CityInfo);
