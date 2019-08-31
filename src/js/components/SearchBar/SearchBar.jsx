@@ -4,7 +4,6 @@ import { getWeather, updateSearchInput } from './searchActions.js';
 export default class SearchBar extends Component {
   constructor(props) {
     super(props);
-
     this.handleCity = this.handleCity.bind(this);
     this.handleSearchInput = this.handleSearchInput.bind(this);
     this.handleSearch = this.handleSearch.bind(this);

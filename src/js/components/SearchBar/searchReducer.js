@@ -12,36 +12,36 @@ const defaultState = {
 };
 
 export default function searchReducer(state = defaultState, action) {
-  const { type, payload } = action;
-  
-  switch (type) {
-    case 'GET_WEATHER_FULFILLED': {
-      return {
-        ...state,
-        cityData: payload.data,
-        cityName: payload.data.name,
-        lat: payload.data.coord.lat,
-        lon: payload.data.coord.lon,
-        temp: payload.data.main.temp,
-        pressure: payload.data.main.pressure,
-        humidity: payload.data.main.humidity,
-        temp_min: payload.data.main.temp_min,
-        temp_max: payload.data.main.temp_max,
-        windSpeed: payload.data.wind.speed,
-        history: [...state.history, {
-          cityName: payload.data.name, 
-          date: new Date().toLocaleString()
-        }]
-      }
-    }
+const { type, payload } = action;
 
-    case 'UPDATE_CITY_INPUT': {
-      return {
-        ...state,
-        city: payload.city,
-      }
+switch (type) {
+  case 'GET_WEATHER_FULFILLED': {
+    return {
+      ...state,
+      cityData: payload.data,
+      cityName: payload.data.name,
+      lat: payload.data.coord.lat,
+      lon: payload.data.coord.lon,
+      temp: payload.data.main.temp,
+      pressure: payload.data.main.pressure,
+      humidity: payload.data.main.humidity,
+      temp_min: payload.data.main.temp_min,
+      temp_max: payload.data.main.temp_max,
+      windSpeed: payload.data.wind.speed,
+      history: [...state.history, {
+        cityName: payload.data.name, 
+        date: new Date().toLocaleString()
+      }]
     }
+  }
 
-    default: return state;
+  case 'UPDATE_CITY_INPUT': {
+    return {
+      ...state,
+      city: payload.city,
+    }
+  }
+
+  default: return state;
   }
 }

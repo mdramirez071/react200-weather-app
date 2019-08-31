@@ -13,7 +13,6 @@ export default class App extends React.Component {
             <h4 className='text-center font-weight-bold'>Check out the weather to see if you'll need an umbrella!</h4>
           </div>
           <SearchBar />
-
           <div className='row'>
             <div className='col-12 col-md-7 mb-4'>
               <CityInfo />
